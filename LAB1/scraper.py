@@ -4,7 +4,10 @@ from duckduckgo_search import DDGS
 
 TEAM = 'G2 Esports'
 TEAM_CODE = 'g2'
+BASE_URL = 'https://lol.fandom.com'
 URL = f'https://lol.fandom.com/wiki/{TEAM}'
+PATH = './docs/_docs/lab1/'
+GIT = 'https://querthdp.github.io/awww/labs/'
 
 
 def front_matter(file, title, permalink, redirect = ''):
@@ -23,8 +26,32 @@ if __name__ == '__main__':
 
     desc = next(DDGS().answers(TEAM))['text']
 
-    with open(f'{TEAM_CODE}.md', 'w') as md_file:
-        front_matter(md_file, TEAM, f'labs/{TEAM_CODE}/')
-        md_file.write(f'# {TEAM}\n')
-        md_file.write(desc + '\n')
-        md_file.write(f'### [Current roster](https://querthdp.github.io/awww/labs/{TEAM_CODE}_players)')
+    table = soup.find('table', 'team-members').find_all('tr')
+
+    with open(f'{PATH}{TEAM_CODE}.md', 'w') as team_file:
+        front_matter(team_file, TEAM, f'labs/{TEAM_CODE}/')
+        image = next(DDGS().images(f'{TEAM} site:https://lol.fandom.com/'))['image']
+        team_file.write(f"![{TEAM}]({image})\n")
+        team_file.write(f'### Description\n')
+        team_file.write(desc + '\n')
+        team_file.write(f'### [Current roster]({GIT}{TEAM_CODE}_players)')
+
+    with open(f'{PATH}{TEAM_CODE}_players.md', 'w') as roster_file:
+        front_matter(roster_file, f'{TEAM} current roster', f'labs/{TEAM_CODE}_players')
+
+        for player in table[1:6]:
+            nickname = player.find('a').text
+            name = player.find('td', 'team-members-irlname').text
+            country = player.find('span', 'country-sprite')['title']
+            role = player.find('span', 'role-sprite')['title']
+            link = player.find('a')['href']
+            image = next(DDGS().images(f'"{nickname}" 2024 leaguepedia'))['image']
+
+            roster_file.write(f"## {role}\n")
+            roster_file.write(f"![{nickname}]({image})\n")
+            roster_file.write(f"### [{nickname}]({GIT}{nickname.replace(' ', '_')})\n")
+            roster_file.write(f"{name}\n\n")
+            roster_file.write(f"{country}\n")
+
+            with open(f"{PATH}{nickname.lower().replace(' ', '_')}.md", 'w') as player_file:
+                front_matter(player_file, nickname, f"labs/{nickname.lower().replace(' ', '_')}")
