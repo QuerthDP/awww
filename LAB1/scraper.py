@@ -30,7 +30,7 @@ if __name__ == '__main__':
 
     with open(f'{PATH}{TEAM_CODE}.md', 'w') as team_file:
         front_matter(team_file, TEAM, f'labs/{TEAM_CODE}')
-        image = next(DDGS().images(f'{TEAM} LEC logo'))['image']
+        image = next(DDGS().images(f'{TEAM} 2024 logo'))['image']
         team_file.write(f"![{TEAM}]({image})\n")
         team_file.write(f'### Description\n')
         team_file.write(desc + '\n')
@@ -45,7 +45,7 @@ if __name__ == '__main__':
             country = player.find('span', 'country-sprite')['title']
             role = player.find('span', 'role-sprite')['title']
             link = player.find('a')['href']
-            image = next(DDGS().images(f'{TEAM_CODE.upper()} "{nickname}" gamepedia'))['image']
+            image = next(DDGS().images(f'{TEAM_CODE.upper()} "{nickname}" gamepedia -site:https://liquipedia.net/'))['image']
 
             roster_file.write(f"## {role}\n")
             roster_file.write(f"![{nickname}]({image})\n")

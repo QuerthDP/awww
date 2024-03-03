@@ -9,7 +9,7 @@ Sergen Çelik
 
 Germany
 ## Jungler
-![Yike](https://liquipedia.net/commons/images/thumb/c/c6/G2_Yike_MSI_2023.jpg/800px-G2_Yike_MSI_2023.jpg)
+![Yike](https://www.esports.net/wp-content/uploads/2023/05/Yike-MSI.jpg)
 ### [Yike](https://querthdp.github.io/awww/labs/yike)
 Martin Sundelin
 
