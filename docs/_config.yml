@@ -1,15 +1,15 @@
 # Site settings
-title: Jekyll Doc Theme
+title: MIMUW AWWW
 email: dp450244@students.mimuw.edu.pl
 description: >
-  Jekyll Template for Project Websites
-  providing documentation and blog post pages.
+  WWW Applications @MIMUW main page for
+  publishing laboratory projects.
 lang: en-US
 
 baseurl: "/awww" # the subpath of your site, e.g. /blog/
 url: https://querthdp.github.io/awww/ # the base hostname & protocol for your site
 git_address: https://github.com/QuerthDP/awww
-git_edit_address: https://github.com/aksakalli/jekyll-doc-theme/blob/gh-pages
+git_edit_address: https://github.com/QuerthDP/awww
 
 # theme options from https://bootswatch.com/3/
 # comment out this to use default Bootstrap
