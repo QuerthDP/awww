@@ -1,4 +1,4 @@
 ---
 title: Mikyx
-permalink: labs/mikyx
+permalink: labs/mikyx/
 ---

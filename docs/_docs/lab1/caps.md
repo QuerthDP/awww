@@ -1,4 +1,4 @@
 ---
 title: Caps
-permalink: labs/caps
+permalink: labs/caps/
 ---

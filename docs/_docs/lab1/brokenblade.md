@@ -1,4 +1,4 @@
 ---
 title: BrokenBlade
-permalink: labs/brokenblade
+permalink: labs/brokenblade/
 ---

@@ -1,4 +1,4 @@
 ---
 title: Yike
-permalink: labs/yike
+permalink: labs/yike/
 ---

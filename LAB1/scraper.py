@@ -13,9 +13,9 @@ GIT = 'https://querthdp.github.io/awww/labs/'
 def front_matter(file, title, permalink, redirect = ''):
     file.write('---\n')
     file.write(f'title: {title}\n')
-    file.write(f'permalink: {permalink}\n')
+    file.write(f'permalink: {permalink}/\n')
     if redirect:
-        file.write(f'redirect_from: {redirect}\n')
+        file.write(f'redirect_from: {redirect}/\n')
     file.write('---\n')
 
 
@@ -29,8 +29,8 @@ if __name__ == '__main__':
     table = soup.find('table', 'team-members').find_all('tr')
 
     with open(f'{PATH}{TEAM_CODE}.md', 'w') as team_file:
-        front_matter(team_file, TEAM, f'labs/{TEAM_CODE}/')
-        image = next(DDGS().images(f'{TEAM} site:https://lol.fandom.com/'))['image']
+        front_matter(team_file, TEAM, f'labs/{TEAM_CODE}')
+        image = next(DDGS().images(f'{TEAM} LEC logo'))['image']
         team_file.write(f"![{TEAM}]({image})\n")
         team_file.write(f'### Description\n')
         team_file.write(desc + '\n')
@@ -45,11 +45,11 @@ if __name__ == '__main__':
             country = player.find('span', 'country-sprite')['title']
             role = player.find('span', 'role-sprite')['title']
             link = player.find('a')['href']
-            image = next(DDGS().images(f'"{nickname}" 2024 leaguepedia'))['image']
+            image = next(DDGS().images(f'{TEAM_CODE.upper()} "{nickname}" gamepedia'))['image']
 
             roster_file.write(f"## {role}\n")
             roster_file.write(f"![{nickname}]({image})\n")
-            roster_file.write(f"### [{nickname}]({GIT}{nickname.replace(' ', '_')})\n")
+            roster_file.write(f"### [{nickname}]({GIT}{nickname.lower().replace(' ', '_')})\n")
             roster_file.write(f"{name}\n\n")
             roster_file.write(f"{country}\n")
 
