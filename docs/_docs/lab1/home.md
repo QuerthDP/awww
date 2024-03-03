@@ -1,7 +1,6 @@
 ---
 title: Laboratory 1
-permalink: /labs/lab1/home/
-redirect_from: /labs/lab1/index.html
+permalink: /labs/home/
 ---
 
 ## Laboratory 1 test home page
