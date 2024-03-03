@@ -1,6 +1,6 @@
 ---
 title: Laboratory 1
-permalink: /labs/home/
+permalink: /labs/labs1/home
 ---
 
 ## Laboratory 1 test home page
