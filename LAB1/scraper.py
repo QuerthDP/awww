@@ -37,7 +37,7 @@ if __name__ == '__main__':
         team_file.write(f'### [Current roster]({GIT}{TEAM_CODE}_players)')
 
     with open(f'{PATH}{TEAM_CODE}_players.md', 'w') as roster_file:
-        front_matter(roster_file, f'{TEAM} current roster', f'labs/{TEAM_CODE}_players')
+        front_matter(roster_file, f'Current roster', f'labs/{TEAM_CODE}_players')
 
         for player in table[1:6]:
             nickname = player.find('a').text
@@ -50,8 +50,14 @@ if __name__ == '__main__':
             roster_file.write(f"## {role}\n")
             roster_file.write(f"![{nickname}]({image})\n")
             roster_file.write(f"### [{nickname}]({GIT}{nickname.lower().replace(' ', '_')})\n")
-            roster_file.write(f"{name}\n\n")
-            roster_file.write(f"{country}\n")
 
             with open(f"{PATH}{nickname.lower().replace(' ', '_')}.md", 'w') as player_file:
                 front_matter(player_file, nickname, f"labs/{nickname.lower().replace(' ', '_')}")
+                player_file.write(f'![{nickname}]({image})\n')
+                player_file.write(f'- Official name: {name}\n')
+                player_file.write(f'- Country: {country}\n')
+                flag = next(DDGS().images(f'{country} flag site:https://en.wikipedia.org/'))['image']
+                player_file.write(f'![{country}]({flag})\n')
+                player_file.write(f'- Role: {role}\n')
+                player_file.write(f'- [Leaguepedia]({BASE_URL}{link})')
+
