@@ -216,7 +216,6 @@ GEM
       kramdown (~> 2.0)
     liquid (4.0.3)
     listen (3.7.0)
-      rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
     minima (2.5.1)
@@ -280,7 +279,7 @@ DEPENDENCIES
   wdm (~> 0.1.1)
 
 RUBY VERSION
-   ruby 2.5.1p57
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.2.31
