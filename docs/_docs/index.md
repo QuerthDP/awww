@@ -12,7 +12,7 @@ redirect_from: /labs/index.html
 
   Web scraping, git pages, Jekyll, WWW basics
 
-- ### Laboratory 2 - work in progress
+- ### [Laboratory 2](https://querthdp.github.io/awww/labs/html/) - work in progress
 
   [Full specification](https://kciebiera.github.io/www-2324/lab2.html)
 
