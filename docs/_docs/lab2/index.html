@@ -32,6 +32,7 @@ permalink: /labs/html/
     </p>
   </article>
 
+  <h2>Roster</h2>
   <table>
     <caption>
       G2 Esports League of Legends Roster
@@ -85,16 +86,46 @@ permalink: /labs/html/
     <li>European League of Legends Championship Series 2017 Spring</li>
     <li>European League of Legends Championship Series 2017 Summer</li>
     <li>League of Legends European Championship 2019 Spring</li>
-    <li>Mid-Season Invitational 2019</li>
+    <li><strong>Mid-Season Invitaional 2019</strong></li>
     <li>League of Legends European Championship 2019 Summer</li>
     <li>League of Legends European Championship 2020 Spring</li>
     <li>League of Legends European Championship 2020 Summer</li>
     <li>League of Legends European Championship 2022 Spring</li>
-    <li>League of Legends EMEA Championship 2023 Winter</li>
+    <li>League of Legends <abbr title='Europe, the Middle East, Africa'>EMEA</abbr> Championship 2023 Winter</li>
     <li>League of Legends EMEA Championship 2023 Summer</li>
     <li>League of Legends EMEA Championship 2023 Season Finals</li>
     <li>League of Legends EMEA Championship 2024 Winter</li>
   </ol>
+
+  <label for="grand slam">Grand Slam progress:</label>
+  <progress id="grand slam" max="4" value="0">0 wins in a row</progress>
+
+  <h2>Express your opinion:</h2>
+  <form action="" method="post">
+      <label for="select_field">Choose the rating:</label>
+        <select id="select_field" name="select_field">
+            <optgroup label="Positive">
+              <option value="3">Great!</option>
+              <option value="2">Very good</option>
+              <option value="1">Good</option>
+            </optgroup>
+            <optgroup label="Neutral">
+              <option value="0">OK</option>
+            </optgroup>
+            <optgroup label="Negative">
+              <option value="-3">Awful!</option>
+              <option value="-2">Very bad</option>
+              <option value="-1">Bad</option>
+            </optgroup>
+        </select>
+      <br>
+
+      <label for="text_field">Add comment:</label>
+      <input type="text" id="text_field" name="text_field" placeholder="Additional comment...">
+      <br>
+
+      <button type="submit">Submit</button>
+  </form>
 
 </base>
 <footer style="text-align: center;">
