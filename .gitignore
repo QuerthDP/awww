@@ -2,5 +2,4 @@
 tailwind.config.js
 package-lock.json
 package.json
-output.css
 node_modules/

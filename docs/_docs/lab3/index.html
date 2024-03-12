@@ -7,14 +7,15 @@ permalink: /labs/tailwind/
 <html lang="en">
 <head>
   <title>G2 Esports</title>
+  <link href="./output.css" rel="stylesheet">
 </head>
 <header style="text-align: center;">
   <img src='{{ "/assets/img/G2_Esports_logo.png" | relative_url }}' alt="G2 Esports Logo" style="width: 100%;">
-  <h1>G2 Esports</h1>
+  <h1 class="text-black">G2 Esports</h1>
 </header>
 <base>
   <article>
-    <h2>Description</h2>
+    <h2 class="text-indigo-700">Description</h2>
     <p>
       G2 Esports is a European esports organization headquartered in Berlin, Germany,
       with players competing in League of Legends, Valorant, Counter-Strike 2, Hearthstone,
@@ -32,7 +33,7 @@ permalink: /labs/tailwind/
     </p>
   </article>
 
-  <h2>Roster</h2>
+  <h2 class="text-indigo-700">Roster</h2>
   <table>
     <caption>
       G2 Esports League of Legends Roster
@@ -90,7 +91,7 @@ permalink: /labs/tailwind/
   <img src='{{ "/assets/img/G2_winter.jpg" | relative_url }}' alt="Winter split winners" style="width: 100%;" usemap="#players">
 
   <details>
-  <summary><h2>Championship Trophies - click to expand</h2></summary>
+  <summary><h2 class="text-indigo-700">Championship Trophies - click to expand</h2></summary>
   <ol type="I">
     <li>European League of Legends Championship Series 2016 Spring</li>
     <li>European League of Legends Championship Series 2016 Summer</li>
@@ -112,7 +113,7 @@ permalink: /labs/tailwind/
   <label for="grand slam">Grand Slam progress:</label>
   <progress id="grand slam" max="4" value="0">0 wins in a row</progress>
 
-  <h2>Express your opinion:</h2>
+  <h2 class="text-amber-800">Express your opinion:</h2>
   <form action="" method="get">
       <label for="select_field">Choose the rating:</label>
         <select id="select_field" name="select_field">
